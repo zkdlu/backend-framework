@@ -15,6 +15,7 @@
 - 각 request handler는 비동기로 지정될 수 있고 I/O 호출이 대기 할 수 있음
 - 모든 request가 각각 스레드에서 실행되고 각 request별로 I/O작업은 비동기로 처리 됨.
 > - 명확한 문서가 너무 안보이넴..
+> - Node.js의 패러다임을 가져온거로 알고있는데 확실치 않음.
 
 ## Node.js
 - 클라이언트의 Request가 들어오면 Event Queue에 입력이 되고 Event Loop가 동작하면서 event queue에 request가 있는지 확인함
