@@ -4,10 +4,11 @@
 - 스프링 어플리케이션은 요청당 Thread 한개가 할당 됨. Thread pool이 수용할 수 있는 요청까지만 동시적으로 작업이 처리 되고, 넘게 되면 큐에서 대기 함
 - Thread 생성 비용은 크기 때문에 미리 생성하여 재사용한다. tomcat 기본 사이즈는 200
 
-## ASP.NET 
-- 스프링처럼 Thread pool을 이용해 처리 됨.
-- 각 I/O호출은 스레드 내에서 동기로 처리 됨.
-- .NET Framework 4.5부터는 async/await패턴을 사용
+## ~ASP.NET~ 
+- ~스프링처럼 Thread pool을 이용해 처리 됨.~
+- ~각 I/O호출은 스레드 내에서 동기로 처리 됨.~
+- ~.NET Framework 4.5부터는 async/await패턴을 사용~
+- > 사실상 뒤졌죠
 
 ## ASP.NET Core
 - async/await패턴으로 request를 비동기로 처리.
