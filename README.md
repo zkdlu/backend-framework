@@ -7,3 +7,8 @@
 ## ASP.NET Core
 
 ## Node.js
+- 클라이언트의 Request가 들어오면 Event Queue에 입력이 되고 Event Loop가 동작하면서 event queue에 request가 있는지 확인함
+- Event Loop는 Single-thread이고 Non-Blocking I/O로 동작함.
+- 내부적으로 C++ 내부의 thread pool로 request를 보내서 처리 됨 (thread-pool에서는 blocking I/O로 동작). 
+- 다시 Event Loop는 event queue를 돌면서 반복함.
+- 내부 thread pool에서 작업이 끝나면 Event Loop에 response를 반환.
