@@ -23,3 +23,9 @@
 - 내부적으로 C++ 내부의 thread pool로 request를 보내서 처리 됨 (thread-pool에서는 blocking I/O로 동작). 
 - 다시 Event Loop는 event queue를 돌면서 반복함.
 - 내부 thread pool에서 작업이 끝나면 Event Loop에 response를 반환.
+
+
+
+### 키워드
+- Spring, ASP.NET Core 프로그램 실행 후 첫 request의 경우 객체 생성이 굉장히 느림 
+- > Warm up 알아보셈
