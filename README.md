@@ -10,7 +10,7 @@
 - ~.NET Framework 4.5부터는 async/await패턴을 사용~
 - > 사실상 뒤졌죠
 
-## ASP.NET Core
+## [ASP.NET Core](./Core.md)
 - async/await패턴으로 request를 비동기로 처리.
 - 각 request handler는 비동기로 지정될 수 있고 I/O 호출이 대기 할 수 있음
 - 모든 request가 각각 스레드에서 실행되고 각 request별로 I/O작업은 비동기로 처리 됨.
