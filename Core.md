@@ -6,6 +6,8 @@
 
 ### 3. 호출 차단 방지 (async/await) 
 - 호출 API 비동기식으로 만들기
+- 비동기는 병렬처리가 아님.
+- 스레드풀에는 스레드의 양이 정해재 있는데 async/await 키워드를 이용해 비동기로 만들게 되면 스레드를 효율적으로 사용이 가능 함.
 
 ### 4. IEnumerable<T> 또는 IAsyncEnumerable<T>을 반환
   
