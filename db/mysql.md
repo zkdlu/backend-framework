@@ -4,6 +4,11 @@ CREATE DATABASE test_db default CHARACTER SET UTF8;
 SHOW DATABASEs;
 ```
 ```sql
+# 데이터베이스, 테이블 삭제
+DROP TABLE test_table;
+DROP DATABASE test_db;
+```
+```sql
 # 데이터베이스 사용자 추가
 GRANT ALL PRIVILEGES ON test_db.* TO user@localhost IDENTIFIED BY 'password'
 mysql -u user -p 'password'
@@ -36,7 +41,16 @@ DESCRIBE test_table
 # 데이터 삽입
 INSERT INTO test_table (name, description) VALUES ('건', 'hello');
 ```
-
+```sql
+# 데이터 제거
+DELETE FROM test_table WHERE name = '건';
+```
+```sql
+# 데이터 변경
+UPDATE test_table
+SET name = '건건'
+WHERE name = '건';
+```
 ```sql
 # 데이터 조회
 SELECT * FROM test_table;
@@ -57,6 +71,17 @@ SELECT * FROM test_table
 WHERE _id > 0 AND name NOT LIKE '건%';
 ```
 
+```sql
+# 테이블 변경
+ALTER TABLE test_table RENAME TO test_tb;
+ALTER TABLE test_tb ADD COLUMN hello INT NOT NULL; # AFTER _id 또는 FIRST로 위치 지정 가능
+ALTER TABLE test_tb ADD PRIMARY KEY(_id);
+ALTER TABLE test_tb DROP COLUMN hello DROP PRIMARY KEY;
+```
+> 1. 이름 변경 RENAME
+> 2. 컬럼, 제약조건 추가 AD
+> 3. 테이블 변경 CHANGE, MODIFY
+> 4. 제약조건 제가 DROP
 
 ### Join
 1. INNER Join
