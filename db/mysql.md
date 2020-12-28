@@ -1,3 +1,5 @@
+# 기본 쿼리
+mysql, oracle, mssql마다 일부 다른 부분이 있으나 거의 유사 함.
 ```sql
 # 데이터베이스 추가, 목록 보기
 CREATE DATABASE test_db default CHARACTER SET UTF8;
