@@ -1,4 +1,4 @@
-# 기본 쿼리
+### 기본 쿼리
 mysql, oracle, mssql마다 일부 다른 부분이 있으나 거의 유사 함.
 ```sql
 # 데이터베이스 추가, 목록 보기
@@ -84,6 +84,32 @@ ALTER TABLE test_tb DROP COLUMN hello DROP PRIMARY KEY;
 > 2. 컬럼, 제약조건 추가 AD
 > 3. 테이블 변경 CHANGE, MODIFY
 > 4. 제약조건 제가 DROP
+
+### 내장 함수
+COUNT, SUM, AVG, MIN, MAX 등
+```sql
+# COUNT
+SELECT COUNT(_id) FROM test_tb;
+# SUM
+SELECT SUM(hello) FROM test_tb;
+```
+- GROUP BY와 함께 사용
+```sql
+SELECT name, COUNT(*)
+FROM test_tb
+GROUP BY name;
+```
+
+문자열 내장 함수
+RIGHT, SUBSTRING, SUBSTRING_INDEX, UPPER
+```sql
+# RIGHT (오른쪽 2글자만 읽음)
+SELECT RIGHT(name, 2) FROM test_tb;
+# SUBSTRING (2번째 위치부터 2글자 읽음)
+SELECT SUBSTRING(name, 2, 2) FROM test_tb; 
+# SUBSTRING_INDEX ('a'가 2번째로 나올때까지 읽음)
+SELECT SUBSTRING_INDEX(name, 'a', 2) FROM test_tb; 
+```
 
 ### Join
 1. INNER Join
