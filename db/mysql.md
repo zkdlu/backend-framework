@@ -90,7 +90,7 @@ ALTER TABLE test_tb DROP COLUMN hello DROP PRIMARY KEY;
 ```sql
 SELECT a.id, b.name
 FROM A as a
-JOIN B as b
+(INNER) JOIN B as b # INNER 
 ON a.id = b.id
 ```
 > 교집합 관계 (A ∩ B)
